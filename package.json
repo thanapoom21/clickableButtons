@@ -6,7 +6,7 @@
   "scripts": {
     "sass-dev": "sass --watch --update --style=expanded src:dist/dev",
     "sass-prod": "sass --no-source-map --style=compressed src/mbuttons.scss:dist/prod/mbuttons.min.css",
-    "prettier": "prettier --write \"src/**/*.scss\" "
+    "prettier": "prettier --write \"src/**/*.scss\" \"dist/dev/mbuttons.css\" "
   },
   "author": "Thanapoom Phithakjarukorn",
   "license": "MIT",
