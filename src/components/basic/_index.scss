@@ -1,5 +1,5 @@
-@use "../variables";
-@use "sass:color";
+@use '../variables';
+@use 'sass:color';
 
 @mixin bc($color) {
   background-color: $color;
@@ -21,7 +21,7 @@
 
 @mixin whiteBtnDarkMode() {
   &.white-btn {
-    [data-theme="dark"] &,
+    [data-theme='dark'] &,
     &.dark-mode {
       color: white !important;
     }
@@ -34,7 +34,7 @@
 
 @mixin blackBtnDarkMode() {
   &.black-btn {
-    [data-theme="dark"] &,
+    [data-theme='dark'] &,
     &.dark-mode {
       color: white !important;
     }
@@ -44,7 +44,6 @@
 .sbtn {
   padding: variables.$buttonPadding;
   text-align: center;
-  -webkit-appearance: none;
   @include bc(transparent);
   border: 1px solid;
   cursor: pointer;
