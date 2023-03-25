@@ -10,6 +10,7 @@
   overflow: hidden;
   font-size: 1.5rem;
 }
+
 .sbtn:hover,
 .sbtn:active,
 .sbtn:focus {
@@ -63,6 +64,7 @@ a.sbtn:active {
 .blue-btn {
   background-color: #50bfe6;
 }
+
 .blue-btn:focus,
 .blue-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(80, 191, 230, 0.3);
@@ -72,6 +74,7 @@ a.sbtn:active {
 .pink-btn {
   background-color: #d53caf;
 }
+
 .pink-btn:focus,
 .pink-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(213, 60, 175, 0.3);
@@ -81,6 +84,7 @@ a.sbtn:active {
 .red-btn {
   background-color: #ed0a3f;
 }
+
 .red-btn:focus,
 .red-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(237, 10, 63, 0.3);
@@ -90,6 +94,7 @@ a.sbtn:active {
 .green-btn {
   background-color: #3aa655;
 }
+
 .green-btn:focus,
 .green-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(58, 166, 85, 0.3);
@@ -100,6 +105,7 @@ a.sbtn:active {
   background-color: #fbe870;
   color: #333;
 }
+
 .yellow-btn:focus,
 .yellow-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(251, 232, 112, 0.3);
@@ -109,6 +115,7 @@ a.sbtn:active {
 .orange-btn {
   background-color: #ff8833;
 }
+
 .orange-btn:focus,
 .orange-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(255, 136, 51, 0.3);
@@ -118,6 +125,7 @@ a.sbtn:active {
 .purple-btn {
   background-color: #652dc1;
 }
+
 .purple-btn:focus,
 .purple-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(101, 45, 193, 0.3);
@@ -127,6 +135,7 @@ a.sbtn:active {
 .black-btn {
   background-color: #000;
 }
+
 .black-btn:focus,
 .black-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(0, 0, 0, 0.3);
@@ -137,15 +146,18 @@ a.sbtn:active {
   background-color: #fff;
   border-color: #e9e9e9;
 }
+
 .white-btn:focus,
 .white-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(255, 255, 255, 0.3);
   outline: 0;
 }
+
 .white-btn:focus,
 .white-btn:active {
   box-shadow: 0px 0px 0 0.2rem rgba(233, 233, 233, 0.67);
 }
+
 .white-btn:not(.fill-color-btn):not(.neon-border-btn) {
   color: #333 !important;
 }
