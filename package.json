@@ -1,0 +1,30 @@
+{
+  "name": "mbuttons",
+  "version": "1.0.0",
+  "description": "simple and inspiring buttons",
+  "main": "dist/prod/mbuttons.min.css",
+  "scripts": {
+    "sass-dev": "sass --watch --update --style=expanded src:dist/dev",
+    "sass-prod": "sass --no-source-map --style=compressed src/mbuttons.scss:dist/prod/mbuttons.min.css",
+    "prettier": "prettier --write \"src/**/*.scss\" \"dist/dev/mbuttons.css\" ",
+    "prepare": "husky install"
+  },
+  "author": "Thanapoom Phithakjarukorn",
+  "license": "MIT",
+  "pre-commit": "lint-staged",
+  "lint-staged": {
+    "**/*.scss": [
+      "prettier --write"
+    ],
+    "**/*.css": [
+      "prettier --write"
+    ],
+    "*.{js,css,md}": "prettier --write"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.6",
+    "sass": "^1.59.3"
+  }
+}
