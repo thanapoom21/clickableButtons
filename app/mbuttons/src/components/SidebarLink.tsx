@@ -1,19 +1,21 @@
 import React, { useCallback, useEffect } from 'react'
 import Link from 'next/link'
 
+interface SidebarLinkProps {
+  text: string
+  to?: string
+  level?: number
+  clickCallback?: any
+  current?: string | null
+}
+
 function SidebarLink({
   text,
   to = '',
   level = 0,
   clickCallback = null,
   current = null,
-}: {
-  text: string
-  to?: string
-  level?: number
-  clickCallback?: any
-  current?: any
-}) {
+}: SidebarLinkProps) {
   const active = current === to
   function scroll() {
     if (to.length) {

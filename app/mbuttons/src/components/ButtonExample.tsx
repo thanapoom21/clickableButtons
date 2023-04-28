@@ -1,23 +1,29 @@
 import React from 'react'
 import ButtonSection from './ButtonSection'
 
+interface IButton {
+  label?: string
+  classes: string
+  variations?: {}[]
+  text?: string
+  htmlContent?: string
+  title?: string
+}
+
+interface IType {
+  name: string
+  shouldHaveRoundedType?: boolean
+  shouldHaveBlockType?: boolean
+  usesColors?: boolean
+  usesText?: boolean
+}
+
 function ButtonExample({
-  button: { classes = '', htmlContent = '', label = '', text = '' },
+  button: { classes, text, htmlContent, label = '', title },
   type: { shouldHaveRoundedType, shouldHaveBlockType, usesColors, usesText },
 }: {
-  button: {
-    classes: string
-    htmlContent?: string
-    label?: string
-    text: string
-  }
-  type: {
-    name: string
-    shouldHaveRoundedType: boolean
-    shouldHaveBlockType: boolean
-    usesColors?: boolean
-    usesText?: boolean
-  }
+  button: IButton
+  type: IType
   htmlContent?: string
 }) {
   return (
@@ -26,7 +32,7 @@ function ButtonExample({
       <div>
         <ButtonSection
           title="Basic"
-          text={text.length ? text : 'Basic'}
+          text={text?.length ? text : 'Basic'}
           classes={classes}
           usesColors={usesColors}
           usesText={usesText}
@@ -35,7 +41,7 @@ function ButtonExample({
         {shouldHaveRoundedType && (
           <ButtonSection
             title="Rounded"
-            text={text.length ? text : 'Rounded'}
+            text={text?.length ? text : 'Rounded'}
             classes={`${classes} rounded-btn`}
             usesColors={usesColors}
             usesText={usesText}
@@ -45,7 +51,7 @@ function ButtonExample({
         {shouldHaveBlockType && (
           <ButtonSection
             title="Block"
-            text={text.length ? text : 'Block'}
+            text={text?.length ? text : 'Block'}
             classes={`${classes} block-btn`}
             usesColors={usesColors}
             usesText={usesText}
