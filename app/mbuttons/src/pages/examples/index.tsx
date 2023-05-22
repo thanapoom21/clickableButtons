@@ -196,7 +196,7 @@ function Examples() {
       <Common activePage="examples" pageTitle={`${buttonProps && buttonProps.button.title ? buttonProps.button.title + ' - ' : ''}Examples`} showMenuButton={true} />
       <div className="flex mt-5">
         <Sidebar>{sidebarLinks}</Sidebar>
-        <div className="container content lg:pr-20 md:w-8/12 pl-3">
+        <div className="container lg:pr-20 md:w-8/12 pl-3">
           <h1 className="text-4xl md:text-left text-center">
             {buttonProps && buttonProps.button.title}
           </h1>

@@ -18,8 +18,8 @@ export default function Home() {
       <div className="home">
         <Common activePage={''} showMenuButton={false} />
         <Hero />
-        <div className="content container px-4 mx-auto">
-          <section className="p-4">
+        <div className="container px-4 mx-auto">
+          <section className="py-4">
             <h2 className="text-3xl font-bold text-black-600">
               <span className="inline-block mr-3 align-middle">
                 <FiCode size="2rem" />
@@ -28,34 +28,34 @@ export default function Home() {
             </h2>
             <div className="gap-12 grid md:grid-cols-2 text-xl mt-2">
               <p>
-                Install sButtons’s source LESS via npm.
+                Install mButtons’s source LESS via npm.
                 Package managed installs don’t include documentation or our full build scripts.
                 You can also use our npm.
               </p>
               <div>
-                <Code code={`npm install sbuttons`} language="shell" />
+                <Code code={`npm install mbuttons`} language="shell" />
               </div>
             </div>
           </section>
-          <section className="p-4">
+          <section className="py-4">
             <h2 className="text-3xl font-bold text-black-600">
               <span className="inline-block mr-3 align-middle">
                 <FiCloud size="2rem" />
               </span>
-              sButtons CDN
+              mButtons CDN
             </h2>
             <div className="gap-12 grid md:grid-cols-2 grid-cols-1 text-xl mt-2">
               <p>
-                When you only need to include sButtons’ compiled CSS , you can use
-                <a href="https://cdn.jsdelivr.net/npm/sbuttons/dist/sbuttons.min.css"
+                When you only need to include mButtons’ compiled CSS , you can use
+                <a href="https://cdn.jsdelivr.net/npm/mbuttons/dist/mbuttons.min.css"
                   target="_blank"
-                  className="text-gray-600 dark:text-white underline-red ml-1"
+                  className="text-blue-600 dark:text-white underline underline-offset-4 ml-1"
                 >
-                  sButtons CDN
+                  mButtons CDN
                 </a>.
               </p>
               <div>
-                <Code code={`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sbuttons/dist/sbuttons.min.css">`}
+                <Code code={`<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mbuttons/dist/mbuttons.min.css">`}
                   language="html" />
               </div>
             </div>

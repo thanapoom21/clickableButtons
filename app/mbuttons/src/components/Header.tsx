@@ -17,7 +17,7 @@ function Header({
 }: HeaderPropsType) {
   return (
     <nav className="shadow-sm py-5 dark:bg-gray-600 bg-white dark:text-white transition-colors duration-100">
-      <div className="container flex flex-row mx-auto">
+      <div className="container flex flex-row mx-auto px-4">
         {showMenuButton && <MenuToggler />}
         <Link
           href="/"
