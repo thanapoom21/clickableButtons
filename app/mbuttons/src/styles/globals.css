@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('./mbuttons.min.css');
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @apply transition-colors duration-100 overflow-x-hidden;
+}
+
+.dark {
+  @apply bg-gray-800 text-white;
+}
+
+.underline-red {
+  @apply underline;
+  text-decoration-color: #e11d48;
+}
+
+.content {
+  min-height: 75vh;
+}
+
+/* .sidebar-item.active {
+  @apply border-red-600 !important
+} */
+
+.sidebar-item {
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.stretched-link {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+/** DARK THEME **/
+
+.dark [id*='carbonads'] {
+  background-color: hsl(0, 0%, 10%);
+  box-shadow: 0 0 1px hsla(0, 0%, 0%, 0.5);
+}
+
+.dark [id*='carbonads'] a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+.dark [id*='carbonads'] a:hover {
+  color: #ddd;
+}
+
+.dark .carbon-poweredby {
+  background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      hsla(0, 0%, 0%, 0.025) 5px,
+      hsla(0, 0%, 0%, 0.025) 10px
+    )
+    hsla(203, 11%, 15%, 0.4);
+  color: #aaa !important;
+}
+
+.heading {
+  background: -webkit-linear-gradient(#ff8533, #ff4da6);
+  -webkit-text-fill-color: transparent;
+}
