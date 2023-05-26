@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../../components/Footer'
+import Common from '../Common'
 import buttons from '../../data/buttons.json'
 import ButtonExample from '../../components/ButtonExample'
 import Sidebar from '../../components/Sidebar'
@@ -7,22 +8,17 @@ import SidebarLink from '../../components/SidebarLink'
 
 interface ButtonObjPropsType {
   button: {
-    classes: string
-    label?: string
-    html: string
-    htmlContent?: string
-    text: string
     title: string
-    variations:
-    | []
-    | {
+    classes: string
+    variations: {
       classes: string
       label: string
       html: string
       text: string
     }[]
+    html?: string
+    text?: string
   }
-  html?: string
   type: {
     name: string
     shouldHaveBlockType: boolean
@@ -30,17 +26,23 @@ interface ButtonObjPropsType {
     usesColors?: boolean
     usesText?: boolean
   }
+  html?: string
 }
 
 interface ButtonsJSONType {
-  children?: any
-  classes: string
+  type: string
   label: string
-  html?: string
-  text?: string
-  type?: string
+  classes: string
+  children?: {
+    type: string
+    label: string
+    classes: string
+    variations?: any
+  }[]
   shouldHaveRoundedType?: boolean
   shouldHaveBlockType?: boolean
+  html?: string
+  text?: string
   usesColors?: boolean
   usesText?: boolean
   variations?:
@@ -54,7 +56,7 @@ interface ButtonsJSONType {
 }
 
 function Examples() {
-  const [currentButton, setCurrentButton] = useState<string | null>(null)
+  const [currentButton, setCurrentButton] = useState<string>('')
   const [sidebarLinks, setSidebarLinks] = useState<JSX.Element[]>([])
 
   useEffect(() => {
@@ -110,20 +112,18 @@ function Examples() {
 
   let buttonProps: ButtonObjPropsType = {
     button: {
-      classes: '',
-      label: undefined,
-      html: '',
-      htmlContent: undefined,
-      text: '',
       title: '',
+      classes: '',
       variations: [],
+      html: '',
+      text: '',
     },
     type: {
       name: '',
       shouldHaveBlockType: false,
       shouldHaveRoundedType: false,
-      usesColors: undefined,
-      usesText: undefined,
+      usesColors: false,
+      usesText: false,
     },
   }
 
@@ -135,9 +135,7 @@ function Examples() {
           button: {
             title: buttonType.label,
             classes: buttonType.classes,
-            variations: buttonType.variations ? buttonType.variations : [],
-            html: buttonType.html !== undefined ? buttonType.html : '',
-            text: buttonType.text !== undefined ? buttonType.text : '',
+            variations: buttonType.children ? buttonType.children?.map(child => child.variations) : [],
           },
           type: {
             name: buttonType.label,
@@ -154,7 +152,7 @@ function Examples() {
         }
         return true
       } else {
-        return buttonType.children.some((buttonChild: ButtonsJSONType) => {
+        buttonType.children?.some((buttonChild: ButtonsJSONType) => {
           if (buttonChild.type === type) {
             buttonProps = {
               button: {
@@ -195,6 +193,7 @@ function Examples() {
 
   return (
     <div className="examples">
+      <Common activePage="examples" pageTitle={`${buttonProps && buttonProps.button.title ? buttonProps.button.title + ' - ' : ''}Examples`} showMenuButton={true} />
       <div className="flex mt-5">
         <Sidebar>{sidebarLinks}</Sidebar>
         <div className="container content lg:pr-20 md:w-8/12 pl-3">

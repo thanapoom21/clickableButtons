@@ -1,9 +1,14 @@
+/* 
+  Fonts should be at the very top, otherwise, it will not be rendered. 
+  Or not recommended to be used at all because of its defer nature of preventing other css files from being downloaded.
+*/
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
 
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('./mbuttons.min.css');
 
 html,
@@ -33,9 +38,9 @@ body {
   min-height: 75vh;
 }
 
-/* .sidebar-item.active {
-  @apply border-red-600 !important
-} */
+.sidebar-item.active {
+  @apply border-red-600 !important;
+}
 
 .sidebar-item {
   width: fit-content;

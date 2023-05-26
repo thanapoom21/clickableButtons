@@ -21,9 +21,6 @@ function Sidebar({ children }: SidebarProps) {
             onClick={() => { setFilter("") }}
             className={!filter ? "disabled-btn ml-2 sbtn fill-color-btn up-fill red-btn xsmall-btn text-justify font-bold" : "ml-2 sbtn fill-color-btn up-fill red-btn xsmall-btn text-justify font-bold"} > Reset </button>
         </div>
-        <>
-          {console.log(children)}
-        </>
         <div>
           {children.filter((child: { props: { text: string; }; }) => {
             return child.props.text.toLowerCase().includes(filter.toLowerCase());

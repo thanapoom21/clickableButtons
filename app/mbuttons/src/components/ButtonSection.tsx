@@ -13,7 +13,7 @@ function ButtonSection({
   title: string,
   text: string,
   classes: string
-  htmlContent: string,
+  htmlContent?: string,
   usesColors?: boolean | undefined
   usesText?: boolean | undefined
 }) {
