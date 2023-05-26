@@ -50,11 +50,11 @@ a.sbtn:active {
   width: 100%;
 }
 .blue-btn {
-  background-color: #50bfe6;
+  background-color: #4290de;
 }
 .blue-btn:focus,
 .blue-btn:active {
-  box-shadow: 0px 0px 0 0.2rem rgba(80, 191, 230, 0.3);
+  box-shadow: 0px 0px 0 0.2rem rgba(66, 144, 222, 0.3);
   outline: 0;
 }
 .pink-btn {
