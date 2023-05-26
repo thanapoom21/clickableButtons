@@ -29,17 +29,17 @@ function Header({
           <Link
             href="/documentation"
             className={
-              'block border-b-2 border-transparent hover:border-red-600 mr-3 ml-4 text-xl text-gray-600 dark:text-white' +
-              (activePage === 'documentation' ? ' border-red-600' : '')
+              'block border-b-2 border-transparent hover:border-blue-600 mr-3 ml-4 text-xl text-gray-600 dark:text-white' +
+              (activePage === 'documentation' ? ' border-blue-600' : '')
             }
           >
-            Docs
+            Documentation
           </Link>
           <Link
             href="/examples"
             className={
-              'block border-b-2 border-transparent hover:border-red-600 mx-3 text-xl text-gray-600 dark:text-white' +
-              (activePage === 'examples' ? ' border-red-600' : '')
+              'block border-b-2 border-transparent hover:border-blue-600 mx-3 text-xl text-gray-600 dark:text-white' +
+              (activePage === 'examples' ? ' border-blue-600' : '')
             }
           >
             Examples
